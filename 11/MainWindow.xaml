@@ -1,0 +1,22 @@
+﻿<Window x:Class="_11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Название"/>
+            <TextBox x:Name="tbName"/>
+            <TextBlock Text="Группа"/>
+            <ComboBox x:Name="cmbGroup"/>
+            <TextBlock Text="Производитель"/>
+            <ComboBox x:Name="cmbManufacturer"/>
+            <TextBlock Text="Цена"/>
+            <TextBox x:Name="tbPrice"/>
+            <Button x:Name="btnButton" Content="АААААААААААААААААААААА" Click="btnButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
