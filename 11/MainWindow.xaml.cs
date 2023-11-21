@@ -56,7 +56,7 @@ namespace _11
             manufacturer.Name = "Типа";
             manufacturers.Add(manufacturer);
 
-            cmbGroup.ItemsSource = manufacturers;
+            cmbGroup.ItemsSource = groups;
             cmbGroup.SelectedIndex = 0;
             cmbGroup.DisplayMemberPath = "Name";
 
@@ -76,8 +76,8 @@ namespace _11
                 Product product = new Product();
                 product.Name = tbName.Text;
                 product.Cost = Convert.ToDecimal(tbPrice.Text);
-                product.GroupId = (cmbGroup.SelectedItem as Group).Id;
                 product.ManufacturerId = (cmbManufacturer.SelectedItem as Manufacturer).Id;
+                product.GroupId = (cmbGroup.SelectedItem as Group).Id;
                 MessageBox.Show("Заебись");
             }
         }
