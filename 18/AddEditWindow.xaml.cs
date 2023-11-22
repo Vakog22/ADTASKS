@@ -23,5 +23,12 @@ namespace _18
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Service service = new Service(Convert.ToInt32(tbId.Text), tbName.Text,Convert.ToDateTime(dpDate.Text));
+            ServiceList.services.Add(service);
+            this.Close();
+        }
     }
 }

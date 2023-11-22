@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static _18.ServiceList;
 
 namespace _18
 {
@@ -20,43 +21,29 @@ namespace _18
     /// </summary>
     public partial class MainWindow : Window
     {
-        class Service 
-        { 
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public DateTime date { get; set; }
-            public Service(int a, string b, DateTime c) 
-            { 
-                Id = a;
-                Name = b;
-                date = c;
-            }
-        }
         public MainWindow()
         {
             InitializeComponent();
-            List<Service> services = new List<Service>
-            {
-                new Service(1, "Первый", DateTime.Now),
-                new Service(2, "Второй", DateTime.Now),
-                new Service(3, "Третий", DateTime.Now)
-            };
-            DG.ItemsSource = services;
+            DG.ItemsSource = ServiceList.services;
         }
 
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-
+            services.Remove(DG.SelectedItem as Service);
+            DG.Items.Refresh();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            AddEditWindow addEditWindow = new AddEditWindow();
+            addEditWindow.Show();
+            DG.Items.Refresh();
+        }
 
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            DG.Items.Refresh();
         }
     }
 }

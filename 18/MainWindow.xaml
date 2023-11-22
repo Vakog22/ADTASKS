@@ -10,9 +10,9 @@
         <StackPanel>
             <DataGrid x:Name="DG" Height="300"/>
             <WrapPanel>
-                <Button Content="Изменить" x:Name="Edit" Click="Edit_Click"/>
                 <Button Content="Удалить" x:Name="Delete" Click="Delete_Click"/>
                 <Button Content="Добавить" x:Name="Add" Click="Add_Click"/>
+                <Button Content="Я костыль" x:Name="Update" Click="Update_Click"/>
             </WrapPanel>
         </StackPanel>
     </Grid>
